@@ -1,0 +1,34 @@
+import one from './one.png'
+import two from './two.png'
+import three from './three.png'
+import four from './four.png'
+import { ArticleLayout } from '../ArticleLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: 'Masterboy sks',
+  date: '2022-08-16',
+  title: 'Made with flowbite in an hour',
+  description: 'One hour challange',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+# I was challanged to make a responsive website as fast as possible so I used flowbite to make a website. Result speaks for it self.
+
+Live on : https://flow-bite-power.vercel.app/
+
+Stack:
+
+- React js
+- Tailwind css
+- Typescript
+- Hosting with versel
+- Next js
+
+# Preview
+
+<Image src={one} alt="hero" />
+<Image src={two} alt="why" />
+<Image src={three} alt="about us" />
+<Image src={four} alt="about us" />

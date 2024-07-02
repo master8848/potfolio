@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/sub/Navbar";
+import { ThemeProvider } from "@/components/provider/ThemeProvider";
+import { ToastProvider } from "@/components/ui/toast";
+import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/sub/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning >
+      <body className={inter.className}>
+        <ThemeProvider>
+
+          <Navbar />
+          <main className=" bg-gray-800 dark:bg-dot-thick-neutral-700 text-gray-200 min-h-[90svh]">{children}</main>
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
