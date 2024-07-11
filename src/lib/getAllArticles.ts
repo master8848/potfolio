@@ -5,7 +5,7 @@ import * as path from 'path'
 
 async function importArticle(articleFilename) {
   let { meta, default: component } = await import(
-    `../app/potfolio/${articleFilename}`
+    `../app/(public)/potfolio/articles/${articleFilename}`
   )
   return {
     slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
@@ -16,7 +16,7 @@ async function importArticle(articleFilename) {
 
 export async function getAllArticles() {
   let articleFilenames = await glob(['*.mdx', '*/page.mdx'], {
-    cwd: path.join(process.cwd(), 'src/app/potfolio'),
+    cwd: path.join(process.cwd(), 'src/app/(public)/potfolio/articles'),
   })
   console.log(articleFilenames)
   let articles = await Promise.all(articleFilenames.map(importArticle))

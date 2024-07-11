@@ -105,7 +105,7 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
           <button className="block md:hidden ml-auto mr-5">
-            <Switch id="airplane-mode" checked={show} onClick={() => setShow(c => !c)} />
+            <Switch id="Menue open" checked={show} onClick={() => setShow(c => !c)} />
           </button>
         </div></motion.header></AnimatePresence>
   )

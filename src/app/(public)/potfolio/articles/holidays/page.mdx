@@ -1,0 +1,33 @@
+import hero from "./one.png";
+import gallery from "./gallery.png";
+import contact from "./contact.png";
+import { ArticleLayout } from "../../ArticleLayout";
+import { LinkPreview } from "@/components/ui/link-preview";
+import Image from "next/image";
+
+export const meta = {
+  author: "Masterboy sks",
+  date: "2022-11-18",
+  title: "Holidays",
+  description: "Relax and Enjoy With Holidays.",
+};
+
+export default (props) => <ArticleLayout meta={meta} {...props} />;
+
+# Relax and Enjoy With Holidays
+
+Live on : <LinkPreview url="https://masterboy-project-1.netlify.app/"> <a href=" https://masterboy-project-1.netlify.app/">Link Preview</a> </LinkPreview>
+
+Slogan: Holidays are all about relaxing, enjoying your time away and catching up with friends. Whatever time of year you choose to go there is little you can't enjoy with a trip to Europe. All of our holidays are designed for you to have fun, meet new people and enjoy some of the most beautiful destinations in Europe.
+
+Stack:
+
+- React js
+- Tailwind css
+- React hook from
+- Typescript
+- Vite
+
+<Image src={hero} alt="hero" />
+<Image src={gallery} alt="Gallery" />
+<Image src={contact} alt="Contact" />

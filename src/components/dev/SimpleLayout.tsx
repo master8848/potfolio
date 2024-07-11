@@ -4,9 +4,9 @@ import { Container } from './Container'
 export function SimpleLayout({ title, intro, children }) {
   return (
     <TracingBeam className="">
-      <div className="py-16 ">
+      <div className="pb-16 ">
         {/* @ts-ignore */}
-        <Container className=" py-16 rounded-3xl bg-gray-700 text-gray-200">
+        <Container className=" py-16 rounded-3xl cntColor">
           <header className="max-w-2xl">
             <h1 className="text-4xl font-bold   tracking-tight  sm:text-5xl">
               {title}

@@ -1,0 +1,45 @@
+import { ArticleLayout } from "../../ArticleLayout";
+import { LinkPreview } from "@/components/ui/link-preview";
+
+export const meta = {
+  author: "Masterboy sks",
+  date: "2022-11-14",
+  title: "My first blog",
+  description: "You dont need to know about typescript to use it.",
+};
+
+export default (props) => <ArticleLayout meta={meta} {...props} />;
+
+As time passes by you will realize using javascrip is nott good enough for projects which are just absoultly enomurous and using typscript for such project just becomes nacessacity.
+
+```jsx
+import React from 'react'
+import {Input} from "@/components/fields"
+import * as yup from "yup"
+import { yupResolver } from "@hook-resolver/yup"
+
+const schema=yup.object().shape({
+  name:yup.string().required("Please enter you name or else I will shoot you.")
+})
+export default function Form() {
+  const {register,handleSubmit}=useForm({resolver:yupResolver(schema)})
+  const onSubmit=d=>console.log(d)
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div>
+        <Input> {/* What props can I pass ?  */}
+      </div>
+    </form>
+  )
+}
+
+```
+
+Althogh javascript can do every thing but it cannot provide any help for you in this case you have to go to the file where function was declared and need to see which props can be passed. While if and onlu if you where using `typescript` with a code editor which is comtable with typescript you very well code know in those props in your finger tips.
+
+## You never know
+
+I would not like to say any thing after this on this topic for another minute or two.
+
+`Like indian advertmesent says` - Phelea istamal kare fir biswas kare.
