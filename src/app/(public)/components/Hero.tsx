@@ -40,9 +40,9 @@ export function HeroSection() {
                 >
                     My name is{" "}
                     <Highlight className="text-black dark:text-white">
-                        <LinkPreview url="https://myfirstblogwebsite.vercel.app/">
-                            Saurav Sanjel
-                        </LinkPreview>
+                        {/* <LinkPreview url="https://myfirstblogwebsite.vercel.app/"> */}
+                        Saurav Sanjel
+                        {/* </LinkPreview> */}
                     </Highlight>
                     ,   <br />
                     {"  "} and I live in Bangalore, India. {"  "}

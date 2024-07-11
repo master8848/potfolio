@@ -10,18 +10,18 @@ const CardLayout = ({ articles }) => {
     return (
         <BentoGrid className="max-w-4xl mx-auto">
             {articles.map((article, i) => (
-                <LinkPreview url={env.NEXT_PUBLIC_SITE_URL + `/potfolio/articles/${article.slug}`}>
+                // <LinkPreview url={env.NEXT_PUBLIC_SITE_URL + `/potfolio/articles/${article.slug}`}>
 
-                    <BentoGridItem
-                        key={i.title}
-                        title={article.title}
-                        description={article.description}
+                <BentoGridItem
+                    key={i.title}
+                    title={article.title}
+                    description={article.description}
 
-                        header={article.header}
-                        icon={<span className='text-gray-500 text-sm'>   {formatDate(article.date)}</span>}
-                        className='min-h-32'
-                    />
-                </LinkPreview>
+                    header={article.header}
+                    icon={<span className='text-gray-500 text-sm'>   {formatDate(article.date)}</span>}
+                    className='min-h-32'
+                />
+                // </LinkPreview>
             ))}
         </BentoGrid>
     )
