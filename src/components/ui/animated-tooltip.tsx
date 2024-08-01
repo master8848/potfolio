@@ -38,8 +38,8 @@ export const AnimatedTooltip = ({
         x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
     };
 
-    const mobileOrDesktop = useDeviceType()
-    const isMobile = useMemo(() => mobileOrDesktop == "mobile", [mobileOrDesktop])
+    // const mobileOrDesktop = useDeviceType()
+    // const isMobile = useMemo(() => mobileOrDesktop == "mobile", [mobileOrDesktop])
 
     return (
         <>
@@ -51,7 +51,9 @@ export const AnimatedTooltip = ({
                 onMouseLeave={() => setHoveredIndex(null)}
             >
                 <AnimatePresence mode="popLayout">
-                    {(!isMobile && hoveredIndex === item.id) ? (
+                    {(
+                        // !isMobile &&
+                        hoveredIndex === item.id) ? (
                         <motion.div
                             initial={{ opacity: 0, y: 20, scale: 0.6 }}
                             animate={{
