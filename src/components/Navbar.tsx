@@ -12,6 +12,8 @@ import { defaultLinks } from "@/config/nav";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+
+
   return (
     <div className="md:hidden border-b mb-4 pb-2 w-full">
       <nav className="flex justify-between w-full items-center">

@@ -30,8 +30,8 @@ import {
 function Article({ article }) {
     return (
         // <LinkPreview url={env.NEXT_PUBLIC_SITE_URL + `/potfolio/articles/${article.slug}`}>
-        <article className="md:grid md:grid-cols-4 md:items-baseline">
-            <Card className="md:col-span-3">
+        <article className="md:grid md:grid-cols-4 md:items-baseline ">
+            <Card className="md:col-span-3 ">
                 <Card.Title href={`/potfolio/articles/${article.slug}`}>
                     {article.title}
                 </Card.Title>
@@ -84,18 +84,18 @@ export default function ArticlesIndex({ articles }) {
             <SimpleLayout
                 title="Articles"
                 intro="My projects and thoughts on Projects."
+                resetval={view}
             >
                 <div className="">
                     <Tabs value={view} className="" onValueChange={(val) => {
-
                         AddQueryString('view', val)
                     }}>
                         <TabsList className="grid w-full grid-cols-2">
                             <TabsTrigger value="list">List View</TabsTrigger>
                             <TabsTrigger value="grid">Grid View</TabsTrigger>
                         </TabsList>
-                        <TabsContent value="list">
-                            <div className="flex max-w-3xl flex-col space-y-16 ">
+                        <TabsContent value="list" className='mt-16'>
+                            <div className="flex max-w-3xl flex-col space-y-16   ">
                                 {articles.map((article) => (
                                     <Article key={article.slug} article={article} />
                                 ))}

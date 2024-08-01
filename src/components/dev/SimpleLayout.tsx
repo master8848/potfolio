@@ -1,12 +1,11 @@
 import { TracingBeam } from '../ui/tracing-beam'
 import { Container } from './Container'
 
-export function SimpleLayout({ title, intro, children }) {
+export function SimpleLayout({ title, intro, children, resetval }) {
   return (
-    <TracingBeam className="">
+    <TracingBeam key={resetval} className="px-6">
       <div className="pb-16 ">
-        {/* @ts-ignore */}
-        <Container className=" py-16 rounded-3xl cntColor">
+        <Container className=" py-16 px-4 rounded-3xl cntColor">
           <header className="max-w-2xl">
             <h1 className="text-4xl font-bold   tracking-tight  sm:text-5xl">
               {title}

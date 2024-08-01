@@ -19,6 +19,6 @@ export async function getAllArticles() {
     cwd: path.join(process.cwd(), 'src/app/(public)/potfolio/articles'),
   })
   let articles = await Promise.all(articleFilenames.map(importArticle))
-  // @ts-ignore
-  return articles.sort((a, z) => new Date(z.date) - new Date(a.date))
+
+  return articles.sort((a, z) => Number(new Date(z.date)) - Number(new Date(a.date)))
 }

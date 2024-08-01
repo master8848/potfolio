@@ -30,7 +30,6 @@
 //   for (let article of articles) {
 //     let url = `${siteUrl}/articles/${article.slug}`
 //     let html = ReactDOMServer.renderToStaticMarkup(
-//       // @ts-ignore
 //       <article.component isRssFeed={true} />
 //     )
 

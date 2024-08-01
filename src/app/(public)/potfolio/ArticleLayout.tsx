@@ -32,7 +32,7 @@ export function ArticleLayout({
 
   return (
     <>
-      <TracingBeam>
+      <TracingBeam className='px-6'>
         <Head>
           <title>{`${meta.title} - Masterboy SKS`}</title>
           <meta name="description" content={meta.description} />

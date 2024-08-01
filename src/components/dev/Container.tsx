@@ -33,7 +33,7 @@ const InnerContainer = forwardRef<
   )
 })
 
-export const Container: Record<string, any> = forwardRef<
+export const Container = forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(function Container(
@@ -47,5 +47,5 @@ export const Container: Record<string, any> = forwardRef<
   )
 })
 
-Container.Outer = OuterContainer
-Container.Inner = InnerContainer
+// Container.Outer = OuterContainer
+// Container.Inner = InnerContainer

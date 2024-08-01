@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
     motion,
     useTransform,
@@ -8,6 +8,7 @@ import {
     useMotionValue,
     useSpring,
 } from "framer-motion";
+import useDeviceType from "@/lib/hooks/useDeviceType";
 
 export const AnimatedTooltip = ({
     item,
@@ -37,6 +38,9 @@ export const AnimatedTooltip = ({
         x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
     };
 
+    const mobileOrDesktop = useDeviceType()
+    const isMobile = useMemo(() => mobileOrDesktop == "mobile", [mobileOrDesktop])
+
     return (
         <>
 
@@ -47,7 +51,7 @@ export const AnimatedTooltip = ({
                 onMouseLeave={() => setHoveredIndex(null)}
             >
                 <AnimatePresence mode="popLayout">
-                    {hoveredIndex === item.id && (
+                    {(!isMobile && hoveredIndex === item.id) ? (
                         <motion.div
                             initial={{ opacity: 0, y: 20, scale: 0.6 }}
                             animate={{
@@ -77,7 +81,7 @@ export const AnimatedTooltip = ({
                             }
                             <div className="w-36 text-wrap">{item.designation}</div>
                         </motion.div>
-                    )}
+                    ) : null}
                 </AnimatePresence>
                 <span
                     onMouseMove={handleMouseMove}

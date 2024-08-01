@@ -7,7 +7,7 @@ const page = () => {
     return (
         <div>
 
-            If auto nagination is not done.  <Link href="/">Go Home</Link>
+            If auto navigation is not done.  <Link href="/">Go Home</Link>
         </div>
     )
 }

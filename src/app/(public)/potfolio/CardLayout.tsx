@@ -6,7 +6,6 @@ import React from 'react'
 
 
 const CardLayout = ({ articles }) => {
-    console.log(articles, "sks test")
     return (
         <BentoGrid className="max-w-4xl mx-auto">
             {articles.map((article, i) => (
