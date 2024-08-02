@@ -1,6 +1,53 @@
-"use client"
-const PdfResume = () => {
+"use client";
 
-    return <iframe src="/Saurav_Sanjel_Resume.pdf" className="w-full h-[100vh]" />;
-}
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { useState } from "react";
+
+const PdfResume = () => {
+  const [openPdf, setOpenPdf] = useState(false);
+
+  return (
+    <Sheet
+      open={openPdf}
+      onOpenChange={(op) => {
+        setOpenPdf(op);
+      }}
+    >
+      <SheetTrigger asChild>
+        <Button
+          variant={"outline"}
+          className="mt-5 !py-4"
+          onClick={() => setOpenPdf((c) => !c)}
+        >
+          {!openPdf ? "View Resume" : "Hide Resume"}
+        </Button>
+      </SheetTrigger>
+      <SheetContent side="bottom">
+        <SheetHeader>
+          <SheetTitle>Saurav's Resume </SheetTitle>
+        </SheetHeader>
+        <div className=" flex items-center justify-center">
+          {/* <iframe
+            src="/Saurav_Sanjel_Resume.pdf"
+            className="lg:w-[80%] h-[85vh]"
+            title="Saurav Resume"
+          /> */}
+          <embed
+            type="application/pdf"
+            src="/Saurav_Sanjel_Resume.pdf"
+            className="lg:w-[80%] h-[85vh]"
+            title="Saurav Resume"
+          ></embed>
+        </div>
+      </SheetContent>
+    </Sheet>
+  );
+};
 export default PdfResume;
