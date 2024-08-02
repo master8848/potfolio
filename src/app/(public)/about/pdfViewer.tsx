@@ -9,7 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useState } from "react";
-
+export const RESUME_URL = "/Saurav_Sanjel_Resume.pdf";
 const PdfResume = () => {
   const [openPdf, setOpenPdf] = useState(false);
 
@@ -35,13 +35,13 @@ const PdfResume = () => {
         </SheetHeader>
         <div className=" flex items-center justify-center">
           {/* <iframe
-            src="/Saurav_Sanjel_Resume.pdf"
+            src={RESUME_URL}
             className="lg:w-[80%] h-[85vh]"
             title="Saurav Resume"
           /> */}
           <embed
             type="application/pdf"
-            src="/Saurav_Sanjel_Resume.pdf"
+            src={RESUME_URL}
             className="lg:w-[80%] h-[85vh]"
             title="Saurav Resume"
           ></embed>

@@ -15,8 +15,9 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
 import { useToast } from "@/components/ui/use-toast";
+import { RESUME_URL } from "../about/pdfViewer";
 
-const SOCIALS_LIST = [
+export const SOCIALS_LIST = [
   {
     name: "Linked In",
     icon: <Linkedin />,
@@ -89,7 +90,7 @@ export function Resume() {
     <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
       <div className="inline-flex rounded-md shadow border-white border">
         <a
-          href="/Saurav_Sanjel_Resume.pdf"
+          href={RESUME_URL}
           download={true}
           className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md  bg-accent  text-accent-foreground"
         >
@@ -123,6 +124,7 @@ export function LinksContex() {
       <ContextMenuLabel>Copy link</ContextMenuLabel>
       {SOCIALS_LIST.map((curr) => (
         <ContextMenuItem
+          key={"List" + curr.name}
           inset
           onSelect={() => {
             navigator.clipboard
