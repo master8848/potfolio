@@ -19,14 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-
     <ThemeProvider>
-      <Navbar />
-      <main className=" bg-gray-800 dark:bg-dot-thick-neutral-700 text-gray-200 min-h-[90svh] pt-16">
-        <Suspense>{children}
-        </Suspense>
-      </main>
-      <Footer />
+      <div className="min-h-[102vh]">
+        <Navbar />
+        <main className=" bg-gray-800 dark:bg-dot-thick-neutral-700 text-gray-200 min-h-[90svh] pt-16">
+          <Suspense>{children}</Suspense>
+        </main>
+        <Footer />
+      </div>
       <Toaster />
     </ThemeProvider>
   );
