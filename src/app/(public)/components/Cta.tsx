@@ -79,34 +79,6 @@ export function Socials({ show = false }) {
               </a>
             </li>
           ))}
-          {/* 
-          <li className="p-3 bg-accent text-accent-foreground rounded-full  border-white border">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/saurav-sanjel-master/"
-            >
-              <Linkedin />
-            </a>
-          </li>
-          <li className="p-3 bg-accent text-accent-foreground rounded-full  border-white border">
-            <a target="_blank" href="https://github.com/master8848">
-              <Github />
-            </a>
-          </li>
-          <li className="p-3 bg-accent text-accent-foreground rounded-full  border-white border">
-            <a
-              target="_blank"
-              href="mailto:sauravsanjelgg+potfolioref@gmail.com"
-            >
-              <AtSign />
-            </a>
-          </li>
-          <li className="p-3 bg-accent text-accent-foreground rounded-full  border-white border">
-            <a target="_blank" href="tel:+91 8310775600">
-              <PhoneCall />
-            </a>
-          </li> 
-          */}
         </ul>
       </h2>
     </>
@@ -170,79 +142,6 @@ export function LinksContex() {
           <span className="pl-2">{curr.name}</span>
         </ContextMenuItem>
       ))}
-      {/* <ContextMenuItem
-        inset
-        onSelect={() => {
-          navigator.clipboard
-            .writeText("https://www.linkedin.com/in/saurav-sanjel-master/")
-            .then(() =>
-              toast({
-                title: "Copied sucessfully✅",
-              })
-            )
-            .catch((e) => {
-              toast({ title: "Could not copy!" });
-              console.error(e);
-            });
-        }}
-      >
-        Linked In
-      </ContextMenuItem>
-      <ContextMenuItem
-        inset
-        onSelect={() => {
-          navigator.clipboard
-            .writeText("https://github.com/master8848")
-            .then(() =>
-              toast({
-                title: "Copied sucessfully✅",
-              })
-            )
-            .catch((e) => {
-              toast({ title: "Could not copy!" });
-              console.error(e);
-            });
-        }}
-      >
-        Github
-      </ContextMenuItem>
-      <ContextMenuItem
-        inset
-        onSelect={() => {
-          navigator.clipboard
-            .writeText("sauravsanjelgg+potfolioref@gmail.com")
-            .then(() =>
-              toast({
-                title: "Copied sucessfully✅",
-              })
-            )
-            .catch((e) => {
-              toast({ title: "Could not copy!" });
-              console.error(e);
-            });
-        }}
-      >
-        Mail
-      </ContextMenuItem>
-      <ContextMenuItem
-        inset
-        onSelect={() => {
-          navigator.clipboard
-            .writeText("tel:+91 8310775600")
-            .then(() =>
-              toast({
-                title: "Copied sucessfully✅",
-              })
-            )
-            .catch((e) => {
-              toast({ title: "Could not copy!" });
-              console.error(e);
-            });
-        }}
-      >
-        Phone
-      </ContextMenuItem>
-      */}
     </ContextMenuContent>
   );
 }
