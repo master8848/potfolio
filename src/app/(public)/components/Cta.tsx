@@ -1,126 +1,248 @@
-"use client"
+"use client";
 
 import {
-    ArrowDownToLine,
-    Linkedin,
-    Github,
-    AtSign,
-    PhoneCall
-} from 'lucide-react'
-import { ContextMenu, ContextMenuContent, ContextMenuItem, ContextMenuLabel, ContextMenuTrigger } from '@/components/ui/context-menu'
-import { useToast } from '@/components/ui/use-toast'
+  ArrowDownToLine,
+  Linkedin,
+  Github,
+  AtSign,
+  PhoneCall,
+} from "lucide-react";
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuTrigger,
+} from "@/components/ui/context-menu";
+import { useToast } from "@/components/ui/use-toast";
+
+const SOCIALS_LIST = [
+  {
+    name: "Linked In",
+    icon: <Linkedin />,
+    link: "https://www.linkedin.com/in/saurav-sanjel-master/",
+  },
+  {
+    name: "Github",
+    icon: <Github />,
+    link: "https://github.com/master8848",
+  },
+  {
+    name: "Mail",
+    icon: <AtSign />,
+    link: "mailto:sauravsanjelgg+potfolioref@gmail.com",
+  },
+  {
+    name: "Phone",
+    icon: <PhoneCall />,
+    link: "tel:+91 8310775600",
+  },
+  {
+    name: "LeetCode",
+    icon: (
+      <>
+        <svg
+          fill="none"
+          stroke="currentColor"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke-width="2"
+          className="lucide "
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z" />
+        </svg>
+      </>
+    ),
+    link: "https://leetcode.com/u/master8848/",
+  },
+];
 export function Socials({ show = false }) {
-    return <>
-        <h2 className="  tracking-tight ">
-            {show ? <span className='p-2 font-bold'>Right click to copy.</span> : null}
-            <ul className='flex space-x-3'>
-                <li className='p-3 bg-accent text-accent-foreground rounded-full  border-white border'>
-                    <a target='_blank' href="https://www.linkedin.com/in/saurav-sanjel-master/">
-
-                        <Linkedin />
-                    </a>
-                </li>
-                <li className='p-3 bg-accent text-accent-foreground rounded-full  border-white border'>
-                    <a target='_blank' href="https://github.com/master8848">
-
-                        <Github />
-                    </a>
-                </li>
-                <li className='p-3 bg-accent text-accent-foreground rounded-full  border-white border'>
-                    <a target='_blank' href="mailto:sauravsanjelgg+potfolioref@gmail.com">
-
-                        <AtSign />
-                    </a>
-                </li>
-                <li className='p-3 bg-accent text-accent-foreground rounded-full  border-white border'>
-                    <a target='_blank' href="tel:+91 8310775600">
-
-                        <PhoneCall />
-                    </a>
-                </li>
-            </ul>
-        </h2>
+  return (
+    <>
+      <h2 className="  tracking-tight ">
+        {show ? (
+          <span className="p-2 font-bold">Right click to copy.</span>
+        ) : null}
+        <ul className="flex space-x-3">
+          {SOCIALS_LIST.map((curr) => (
+            <li
+              key={"view" + curr.name}
+              className="p-3 bg-accent text-accent-foreground rounded-full  border-white border"
+            >
+              <a target="_blank" href={curr.link}>
+                {curr.icon}
+              </a>
+            </li>
+          ))}
+          {/* 
+          <li className="p-3 bg-accent text-accent-foreground rounded-full  border-white border">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/saurav-sanjel-master/"
+            >
+              <Linkedin />
+            </a>
+          </li>
+          <li className="p-3 bg-accent text-accent-foreground rounded-full  border-white border">
+            <a target="_blank" href="https://github.com/master8848">
+              <Github />
+            </a>
+          </li>
+          <li className="p-3 bg-accent text-accent-foreground rounded-full  border-white border">
+            <a
+              target="_blank"
+              href="mailto:sauravsanjelgg+potfolioref@gmail.com"
+            >
+              <AtSign />
+            </a>
+          </li>
+          <li className="p-3 bg-accent text-accent-foreground rounded-full  border-white border">
+            <a target="_blank" href="tel:+91 8310775600">
+              <PhoneCall />
+            </a>
+          </li> 
+          */}
+        </ul>
+      </h2>
     </>
+  );
 }
 export function Resume() {
-    return <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-        <div className="inline-flex rounded-md shadow border-white border">
-            <a
-                href="/Saurav_Sanjel_Resume.pdf"
-                download={true}
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md  bg-accent  text-accent-foreground"
-            >
-                Download Resume{"  "} <ArrowDownToLine className='ml-2' />
-            </a>
-        </div>
+  return (
+    <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+      <div className="inline-flex rounded-md shadow border-white border">
+        <a
+          href="/Saurav_Sanjel_Resume.pdf"
+          download={true}
+          className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md  bg-accent  text-accent-foreground"
+        >
+          Download Resume{"  "} <ArrowDownToLine className="ml-2" />
+        </a>
+      </div>
     </div>
+  );
 }
 export default function Cta() {
-    return (
-        <div className="">
-            <ContextMenu>
-                <ContextMenuTrigger className="">
-                    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
-                        <Socials show></Socials>
-                        <Resume />
-                    </div>
-
-
-                </ContextMenuTrigger>
-                <LinksContex />
-            </ContextMenu>
-        </div>
-    )
+  return (
+    <div className="">
+      <ContextMenu>
+        <ContextMenuTrigger className="">
+          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <Socials show></Socials>
+            <Resume />
+          </div>
+        </ContextMenuTrigger>
+        <LinksContex />
+      </ContextMenu>
+    </div>
+  );
 }
 
 export function LinksContex() {
-    const { toast } = useToast()
+  const { toast } = useToast();
 
-    return <ContextMenuContent className="w-64">
-        <ContextMenuLabel >
-            Copy link
-        </ContextMenuLabel>
-        <ContextMenuItem inset onSelect={() => {
-
-            navigator.clipboard.writeText("https://www.linkedin.com/in/saurav-sanjel-master/").then(() => toast({
-                title: "Copied sucessfully✅",
-            })).catch((e) => { toast({ title: "Could not copy!" }); console.error(e) })
-
-        }
-        }>
-            Linked In
-
+  return (
+    <ContextMenuContent className="w-64">
+      <ContextMenuLabel>Copy link</ContextMenuLabel>
+      {SOCIALS_LIST.map((curr) => (
+        <ContextMenuItem
+          inset
+          onSelect={() => {
+            navigator.clipboard
+              .writeText(curr.link)
+              .then(() =>
+                toast({
+                  title: "Copied sucessfully✅",
+                })
+              )
+              .catch((e) => {
+                toast({ title: "Could not copy!" });
+                console.error(e);
+              });
+          }}
+        >
+          {curr.icon}
+          <span className="pl-2">{curr.name}</span>
         </ContextMenuItem>
-        <ContextMenuItem inset onSelect={() => {
-
-            navigator.clipboard.writeText("https://github.com/master8848").then(() => toast({
+      ))}
+      {/* <ContextMenuItem
+        inset
+        onSelect={() => {
+          navigator.clipboard
+            .writeText("https://www.linkedin.com/in/saurav-sanjel-master/")
+            .then(() =>
+              toast({
                 title: "Copied sucessfully✅",
-            })).catch((e) => { toast({ title: "Could not copy!" }); console.error(e) })
-
-        }
-        } >
-            Github
-        </ContextMenuItem>
-        <ContextMenuItem inset onSelect={() => {
-
-            navigator.clipboard.writeText("sauravsanjelgg+potfolioref@gmail.com").then(() => toast({
+              })
+            )
+            .catch((e) => {
+              toast({ title: "Could not copy!" });
+              console.error(e);
+            });
+        }}
+      >
+        Linked In
+      </ContextMenuItem>
+      <ContextMenuItem
+        inset
+        onSelect={() => {
+          navigator.clipboard
+            .writeText("https://github.com/master8848")
+            .then(() =>
+              toast({
                 title: "Copied sucessfully✅",
-            })).catch((e) => { toast({ title: "Could not copy!" }); console.error(e) })
-
-        }
-        }>
-            Mail
-        </ContextMenuItem>
-        <ContextMenuItem inset onSelect={() => {
-
-            navigator.clipboard.writeText("tel:+91 8310775600").then(() => toast({
+              })
+            )
+            .catch((e) => {
+              toast({ title: "Could not copy!" });
+              console.error(e);
+            });
+        }}
+      >
+        Github
+      </ContextMenuItem>
+      <ContextMenuItem
+        inset
+        onSelect={() => {
+          navigator.clipboard
+            .writeText("sauravsanjelgg+potfolioref@gmail.com")
+            .then(() =>
+              toast({
                 title: "Copied sucessfully✅",
-            })).catch((e) => { toast({ title: "Could not copy!" }); console.error(e) })
-
-        }
-        }>
-            Phone
-        </ContextMenuItem>
-
+              })
+            )
+            .catch((e) => {
+              toast({ title: "Could not copy!" });
+              console.error(e);
+            });
+        }}
+      >
+        Mail
+      </ContextMenuItem>
+      <ContextMenuItem
+        inset
+        onSelect={() => {
+          navigator.clipboard
+            .writeText("tel:+91 8310775600")
+            .then(() =>
+              toast({
+                title: "Copied sucessfully✅",
+              })
+            )
+            .catch((e) => {
+              toast({ title: "Could not copy!" });
+              console.error(e);
+            });
+        }}
+      >
+        Phone
+      </ContextMenuItem>
+      */}
     </ContextMenuContent>
-} 
+  );
+}
