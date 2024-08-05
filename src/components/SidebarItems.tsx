@@ -6,13 +6,8 @@ import { usePathname } from "next/navigation";
 import { LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { defaultLinks, additionalLinks } from "@/config/nav";
+import { defaultLinks, additionalLinks, SidebarLink } from "@/config/nav";
 
-export interface SidebarLink {
-  title: string;
-  href: string;
-  icon?: LucideIcon;
-}
 
 const SidebarItems = () => {
   return (

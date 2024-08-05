@@ -1,10 +1,15 @@
-import { SidebarLink } from "@/components/SidebarItems";
 import { Cog, Globe, User, HomeIcon, Book } from "lucide-react";
 
 type AdditionalLinks = {
   title: string;
   links: SidebarLink[];
 };
+
+export interface SidebarLink {
+  title: string;
+  href: string;
+  icon?: LucideIcon;
+}
 
 export const defaultLinks: SidebarLink[] = [
   { href: "/dashboard", title: "Home", icon: HomeIcon },
