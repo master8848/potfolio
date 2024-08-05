@@ -3,10 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { defaultLinks, additionalLinks, SidebarLink } from "@/config/nav";
+import { defaultLinks, additionalLinks,type SidebarLink } from "@/config/nav";
 
 
 const SidebarItems = () => {

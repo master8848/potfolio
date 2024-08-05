@@ -1,4 +1,5 @@
 import { Cog, Globe, User, HomeIcon, Book } from "lucide-react";
+import {type LucideIcon } from "lucide-react";
 
 type AdditionalLinks = {
   title: string;

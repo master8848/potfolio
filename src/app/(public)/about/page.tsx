@@ -1,11 +1,9 @@
 "use client";
 
 import { ContextMenu, ContextMenuTrigger } from "@/components/ui/context-menu";
-import Cta, { LinksContex, Resume, Socials } from "../components/Cta";
+import { LinksContex, Resume, Socials } from "../components/Cta";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import PdfResume from "./pdfViewer";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 
 export default function AboutMe() {
   return (

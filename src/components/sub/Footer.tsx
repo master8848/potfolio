@@ -1,5 +1,4 @@
-import { SOCIALS_LIST } from "@/app/(public)/components/Cta";
-import { AtSign, Github, Linkedin, PhoneCall } from "lucide-react";
+import { SOCIALS_LIST } from "./SocialLists";
 import React from "react";
 
 const Footer = () => {
