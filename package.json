@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "gn": "drizzle-kit generate",
+    "gn": "drizzle-kit generate ",
     "migrate": "tsx src/lib/db/migrate.ts",
     "db:drop": "drizzle-kit drop",
     "db:pull": "drizzle-kit introspect",
