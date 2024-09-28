@@ -1,0 +1,31 @@
+import one from "./one.png";
+import two from "./two.png";
+import { ArticleLayout } from "../../ArticleLayout";
+import { LinkPreview } from "@/components/ui/link-preview";
+import Image from "next/image";
+
+export const meta = {
+  author: "Masterboy sks",
+  date: "2021-12-03",
+  title: "Mistify Landing",
+  description: "Wanna go to an newly found world?Join us on Mistify",
+};
+
+export default (props) => <ArticleLayout meta={meta} {...props} />;
+
+# Mistify Go outsise Earth For Holidays
+
+Live on :<LinkPreview url="https://mistify.onrender.com/"> <a href=" https://mistify.onrender.com/">Link Preview</a> </LinkPreview>
+
+Stack:
+
+- React js
+- Tailwind css
+- Vite
+- Typescript
+- Hosting with render
+
+# Preview
+
+<Image src={one} alt="hero" />
+<Image src={two} alt="why" />

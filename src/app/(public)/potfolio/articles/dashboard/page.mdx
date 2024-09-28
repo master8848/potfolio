@@ -1,0 +1,36 @@
+import one from "./one.png";
+import two from "./two.png";
+import three from "./three.png";
+import four from "./four.png";
+import five from "./five.png";
+import { ArticleLayout } from "../../ArticleLayout";
+import { LinkPreview } from "@/components/ui/link-preview";
+import Image from "next/image";
+
+export const meta = {
+  author: "Masterboy sks",
+  date: "2022-10-16",
+  title: "Master Dashboard",
+  description: "Data driven dashboard",
+};
+
+export default (props) => <ArticleLayout meta={meta} {...props} />;
+
+# Relax and Enjoy With Holidays
+
+Live on : <LinkPreview url="https://master-project-2.netlify.app/"> <a href=" https://master-project-2.netlify.app/">Link Preview</a> </LinkPreview>
+
+Stack:
+
+- React js
+- Tailwind css
+- Sync fusion
+- Typescript
+- React router dom
+- Vite
+
+<Image src={one} alt="dashboard" />
+<Image src={two} alt="dashboard bottom" />
+<Image src={three} alt="table" />
+<Image src={four} alt="todo " />
+<Image src={five} alt="chart" />

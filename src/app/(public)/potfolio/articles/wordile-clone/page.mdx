@@ -1,0 +1,30 @@
+import one from "./one.png";
+import { ArticleLayout } from "../../ArticleLayout";
+import { LinkPreview } from "@/components/ui/link-preview";
+import Image from "next/image";
+
+export const meta = {
+  author: "Masterboy sks",
+  date: "2022-04-13",
+  title: "Wordile",
+  description: "Wordile clone .",
+};
+
+export default (props) => <ArticleLayout meta={meta} {...props} />;
+
+## Wordile is Popular game of 2021-2022 where you have 5 tries to guess one word based on hints
+
+Live on :<LinkPreview url="https://wordile-clone.onrender.com/"> <a href=" https://wordile-clone.onrender.com/">Link Preview</a> </LinkPreview>
+
+Stack:
+
+- React js
+- Tailwind css
+- Typescript
+- Contex Api
+- Hosting with render
+- Vite
+
+# Preview
+
+<Image src={one} alt="hero" />

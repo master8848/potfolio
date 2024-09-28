@@ -1,0 +1,37 @@
+import one from "./one.png";
+import two from "./two.png";
+import three from "./three.png";
+import four from "./four.png";
+import five from "./five.png";
+import { ArticleLayout } from "../../ArticleLayout";
+import { LinkPreview } from "@/components/ui/link-preview";
+import Image from "next/image";
+
+export const meta = {
+  author: "Masterboy sks",
+  date: "2022-10-19",
+  title: "Landing page",
+  description: "Landing page for an ed tech company.",
+};
+
+export default (props) => <ArticleLayout meta={meta} {...props} />;
+
+# Learn Like no one
+
+Live on :<LinkPreview url="https://master-project-3.netlify.app/"> <a href=" https://master-project-3.netlify.app/">Link Preview</a> </LinkPreview>
+
+Stack:
+
+- React js
+- Tailwind css
+- Material ui
+- React router dom
+- Vite
+- Netlify
+- Farmer motion(Tried failed)
+
+<Image src={one} alt="hero" />
+<Image src={two} alt="why" />
+<Image src={three} alt="about us" />
+<Image src={four} alt="carrer " />
+<Image src={five} alt="profile" />

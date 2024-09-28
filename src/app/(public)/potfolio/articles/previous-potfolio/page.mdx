@@ -1,0 +1,30 @@
+import one from "./one.png";
+import two from "./two.png";
+import three from "./three.png";
+import { ArticleLayout } from "../../ArticleLayout";
+import { LinkPreview } from "@/components/ui/link-preview";
+import Image from "next/image";
+
+export const meta = {
+  author: "Masterboy sks",
+  date: "2020-09-15",
+  title: "My previous potfolio",
+  description: "Potfolio masterboysks",
+};
+
+export default (props) => <ArticleLayout meta={meta} {...props} />;
+
+# My previous potfolio before getting job on spellinnovation
+
+Live on :<LinkPreview url="https://previous-potfolio.onrender.com"> <a href=" https://previous-potfolio.onrender.com">Link Preview</a> </LinkPreview>
+
+Stack:
+
+- React js
+- Hosting with heroku
+
+# Preview
+
+<Image src={one} alt="hero" />
+<Image src={two} alt="why" />
+<Image src={three} alt="about us" />
