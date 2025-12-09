@@ -1,0 +1,33 @@
+@layer base {
+  .green {
+    --background: oklch(100% 0 0); /* White */
+    --foreground: oklch(14.1% 0.005 285.823); /* Darker text */
+
+    --card: oklch(100% 0 0); /* White */
+    --card-foreground: oklch(14.1% 0.005 285.823); /* Darker text */
+
+    --popover: oklch(100% 0 0); /* White */
+    --popover-foreground: oklch(14.1% 0.005 285.823); /* Darker text */
+
+    --primary: oklch(45% 0.15 140); /* A vibrant green */
+    --primary-foreground: oklch(98% 0 0); /* White text on primary */
+
+    --secondary: oklch(90% 0.02 140); /* Lighter green/gray */
+    --secondary-foreground: oklch(25% 0.01 140); /* Darker text on secondary */
+
+    --muted: oklch(95% 0.01 140); /* Very light green/gray */
+    --muted-foreground: oklch(45% 0.01 140); /* Medium text on muted */
+
+    --accent: oklch(45% 0.15 140); /* Same as primary for accent */
+    --accent-foreground: oklch(98% 0 0); /* White text on accent */
+
+    --destructive: oklch(50% 0.2 20); /* Red for destructive actions */
+    --destructive-foreground: oklch(98% 0 0); /* White text on destructive */
+
+    --border: oklch(90% 0.01 140); /* Light green border */
+    --input: oklch(90% 0.01 140); /* Light green input border */
+    --ring: oklch(45% 0.15 140); /* Primary green for focus ring */
+
+    --radius: 0.5rem; /* Border radius */
+  }
+}

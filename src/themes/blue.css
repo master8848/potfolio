@@ -1,0 +1,23 @@
+@layer base {
+  .blue {
+    --background: 210 100% 10%;
+    --foreground: 210 20% 98%;
+    --card: 210 100% 10%;
+    --card-foreground: 210 20% 98%;
+    --popover: 210 100% 10%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 90% 50%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 210 80% 20%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 210 80% 20%;
+    --muted-foreground: 210 10% 60%;
+    --accent: 210 80% 20%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 210 80% 20%;
+    --input: 210 80% 20%;
+    --ring: 210 90% 50%;
+  }
+}

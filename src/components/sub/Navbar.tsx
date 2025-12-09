@@ -5,7 +5,6 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -23,10 +22,10 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { Switch } from "../ui/switch";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
+import { Menu, Sun, Moon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface INavbarValues {
   name: string;
@@ -53,7 +52,7 @@ const NavbarValues: INavbarValues[] = [
 ];
 
 const Navbar = (): React.JSX.Element => {
-  // const [show, setShow] = useState(false)
+  const { setTheme, themes } = useTheme();
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
@@ -88,7 +87,6 @@ const Navbar = (): React.JSX.Element => {
         transition={{
           duration: 0.2,
         }}
-        // flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/20 rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-5000 pr-2 pl-8 py-2  items-center justify-center space-x-4
         className="fixed w-screen top-0 z-5000 bg-transparent"
       >
         <div className="lg:container container-xs mx-auto flex flex-wrap p-2 flex-row items-center justify-between">
@@ -104,7 +102,6 @@ const Navbar = (): React.JSX.Element => {
             <span
               className={cn(
                 "ml-3 text-xl font-serif"
-                //  show ? "hidden" : " flex"
               )}
             >
               <span className="text-green-400">MB</span>
@@ -115,7 +112,6 @@ const Navbar = (): React.JSX.Element => {
           <NavigationMenu
             className={
               " hidden md:flex "
-              //  show ? "flex " : " hidden " +
             }
           >
             <NavigationMenuList className="space-x-2">
@@ -131,23 +127,44 @@ const Navbar = (): React.JSX.Element => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="mobile block md:hidden mr-4">
+          
+          <div className="flex items-center gap-4">
             <DropdownMenu>
-              <DropdownMenuTrigger className="block md:hidden">
-                <Menu size={28} />
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuLabel>@Saurav sanjel</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                {NavbarValues.map((c) => (
-                  <Link href={c.link}>
-                    <DropdownMenuItem key={"mobileNavigation" + c.name}>
-                      {c.name}
-                    </DropdownMenuItem>
-                  </Link>
+              <DropdownMenuContent align="end">
+                {themes?.map((theme) => (
+                  <DropdownMenuItem
+                    key={theme}
+                    onClick={() => setTheme(theme)}
+                    className="capitalize"
+                  >
+                    {theme}
+                  </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+            <div className="mobile block md:hidden mr-4">
+              <DropdownMenu>
+                <DropdownMenuTrigger className="block md:hidden">
+                  <Menu size={28} />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel>@Saurav sanjel</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  {NavbarValues.map((c) => (
+                    <Link href={c.link} key={"mobileNavigation" + c.name}>
+                      <DropdownMenuItem>{c.name}</DropdownMenuItem>
+                    </Link>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
         </div>
       </motion.header>
