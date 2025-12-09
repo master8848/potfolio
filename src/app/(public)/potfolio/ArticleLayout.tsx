@@ -34,7 +34,10 @@ export function ArticleLayout({ children, meta, isRssFeed = false }) {
           <meta name="description" content={meta.description} />
         </Head>
         {/* <Container className="mt-16 lg:mt-32"> */}
-        <div className="xl:relative  relative w-full max-w-4xl mx-auto h-full  rounded-3xl cntColor py-16 px-2 ">
+        <div
+          className="xl:relative  relative w-full max-w-4xl mx-auto h-full  rounded-3xl cntColor py-16 px-2 "
+          style={{ viewTransitionName: `article-${meta.slug}` }}
+        >
           <div className="mx-auto max-w-2xl">
             {/* {previousPathname && ( */}
             <button

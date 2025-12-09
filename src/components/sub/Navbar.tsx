@@ -22,7 +22,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import Link from "next/link";
+import TransitionLink from "@/components/ui/transition-link";
 import { cn } from "@/lib/utils";
 import { Menu, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -121,7 +121,7 @@ const Navbar = (): React.JSX.Element => {
                   className=" py-2 px-3 rounded-sm  hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <NavigationMenuLink>
-                    <Link href={c.link}>{c.name}</Link>
+                    <TransitionLink href={c.link}>{c.name}</TransitionLink>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
@@ -158,9 +158,9 @@ const Navbar = (): React.JSX.Element => {
                   <DropdownMenuLabel>@Saurav sanjel</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   {NavbarValues.map((c) => (
-                    <Link href={c.link} key={"mobileNavigation" + c.name}>
+                    <TransitionLink href={c.link} key={"mobileNavigation" + c.name}>
                       <DropdownMenuItem>{c.name}</DropdownMenuItem>
-                    </Link>
+                    </TransitionLink>
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>

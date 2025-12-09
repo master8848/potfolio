@@ -13,6 +13,9 @@ const withMDX = createMDX({
 });
 
 const nextConfig = {
+  experimental: {
+    viewTransition: true,
+  },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   outputFileTracingIncludes: {
     '/potfolio/articles/*': ['src/app/(public)/potfolio/articles/**/*.mdx'],
