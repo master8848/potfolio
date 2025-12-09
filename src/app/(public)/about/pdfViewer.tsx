@@ -23,7 +23,7 @@ const PdfResume = () => {
       <SheetTrigger asChild>
         <Button
           variant={"outline"}
-          className="mt-5 !py-4"
+          className="mt-5 py-4!"
           onClick={() => setOpenPdf((c) => !c)}
         >
           {!openPdf ? "View Resume" : "Hide Resume"}

@@ -10,7 +10,7 @@ const links = [
 
 export default function Custom404() {
   return (
-    <div className="bg-slate-800 h-full text-slate-200  min-h-[100svh]">
+    <div className="bg-slate-800 h-full text-slate-200  min-h-svh">
       <main className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto pb-16 sm:pb-24">
           <div className="text-center">
@@ -37,11 +37,11 @@ export default function Custom404() {
                   key={linkIdx}
                   className="relative py-6 flex items-start space-x-4"
                 >
-                  <div className="flex-shrink-0"></div>
+                  <div className="shrink-0"></div>
                   <div className="min-w-0 flex-1">
                     <h3 className="text-base font-medium ">
                       <span className="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-accent">
-                        <a href="#" className="focus:outline-none">
+                        <a href="#" className="focus:outline-hidden">
                           <span
                             className="absolute inset-0"
                             aria-hidden="true"
@@ -52,7 +52,7 @@ export default function Custom404() {
                     </h3>
                     <p className="text-base ">{link.description}</p>
                   </div>
-                  <div className="flex-shrink-0 self-center">
+                  <div className="shrink-0 self-center">
                     {/* <ChevronRightIcon className="h-5 w-5 " aria-hidden="true" /> */}
                   </div>
                 </li>

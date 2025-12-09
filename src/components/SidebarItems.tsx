@@ -64,7 +64,7 @@ const SidebarLink = ({
   return (
     <Link
       href={link.href}
-      className={`group transition-colors p-2 inline-block hover:bg-popover hover:text-primary text-muted-foreground text-xs hover:shadow rounded-md w-full${
+      className={`group transition-colors p-2 inline-block hover:bg-popover hover:text-primary text-muted-foreground text-xs hover:shadow-sm rounded-md w-full${
         active ? " text-primary font-semibold" : ""
       }`}
     >

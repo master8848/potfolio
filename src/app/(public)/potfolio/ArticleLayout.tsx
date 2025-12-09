@@ -45,7 +45,7 @@ export function ArticleLayout({ children, meta, isRssFeed = false }) {
                   : router.push("/potfolio/articles");
               }}
               aria-label="Go back to articles"
-              className="group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-blue-800/5 ring-1 ring-blue-900/5 transition dark:border dark:border-blue-700/50 dark:bg-blue-800 dark:ring-0 dark:ring-white/10 dark:hover:border-blue-700 dark:hover:ring-white/20 lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:top-[3.625rem] xl:-left-4 xl:mt-0"
+              className="group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-blue-800/5 ring-1 ring-blue-900/5 transition dark:border dark:border-blue-700/50 dark:bg-blue-800 dark:ring-0 dark:ring-white/10 dark:hover:border-blue-700 dark:hover:ring-white/20 lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:top-14.5 xl:-left-4 xl:mt-0"
             >
               <ArrowLeftIcon className="h-4 w-4 stroke-blue-500 transition group-hover:stroke-blue-700 dark:stroke-blue-500 dark:group-hover:stroke-blue-400" />
             </button>

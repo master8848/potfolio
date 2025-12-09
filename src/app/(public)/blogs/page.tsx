@@ -3,7 +3,7 @@ import React from "react";
 const page = () => {
   return (
     <section className="mx-auto cntColor my-16 w-[80vw] container sm:px-8  py-16 rounded-3xl  ">
-      <div className="py-8 px-4 mx-auto max-w-screen-md  text-center lg:py-16 lg:px-12">
+      <div className="py-8 px-4 mx-auto max-w-(--breakpoint-md)  text-center lg:py-16 lg:px-12">
         <svg
           className="mx-auto mb-4 w-10 h-10 "
           xmlns="http://www.w3.org/2000/svg"

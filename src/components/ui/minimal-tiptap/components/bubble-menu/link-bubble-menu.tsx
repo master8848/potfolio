@@ -65,7 +65,7 @@ const LinkBubbleMenu = ({ editor }: { editor: Editor }) => {
         <LinkEditBlock
           onSetLink={onSetLink}
           editor={editor}
-          className="w-full min-w-80 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none"
+          className="w-full min-w-80 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-hidden"
         />
       ) : (
         <LinkPopoverBlock

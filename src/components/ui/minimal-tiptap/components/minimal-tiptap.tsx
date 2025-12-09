@@ -103,7 +103,7 @@ const MinimalTiptapEditor = forwardRef<HTMLDivElement, MinimalTiptapProps>(
       editorProps: {
         attributes: {
           class:
-            "prose mx-auto focus:outline-none max-w-none prose-stone dark:prose-invert",
+            "prose mx-auto focus:outline-hidden max-w-none prose-stone dark:prose-invert",
         },
       },
       onUpdate: (props) => {
@@ -128,7 +128,7 @@ const MinimalTiptapEditor = forwardRef<HTMLDivElement, MinimalTiptapProps>(
       <div>
         <div
           className={cn(
-            "flex h-auto min-h-72 w-full flex-col rounded-md border border-input shadow-sm focus-within:border-primary",
+            "flex h-auto min-h-72 w-full flex-col rounded-md border border-input shadow-xs focus-within:border-primary",
             className
           )}
           {...props}
