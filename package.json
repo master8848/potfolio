@@ -6,8 +6,8 @@
     "node": "^20.0.0"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -96,7 +96,7 @@
     "remark-gfm": "^4.0.1",
     "sharp": "^0.33.4",
     "sonner": "^1.5.0",
-    "tailwind-merge": "^2.3.0",
+    "tailwind-merge": "3.4.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.1",
     "zod": "^3.23.8"
